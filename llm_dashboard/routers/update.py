@@ -18,6 +18,9 @@ async def update(request: Request):
     except json.JSONDecodeError:
         return JSONResponse({"success": False, "error": "invalid body"}, status_code=400)
 
+    if not isinstance(payload, dict):
+        return JSONResponse({"success": False, "error": "invalid body"}, status_code=400)
+
     target = payload.get("target")
     if not target:
         return JSONResponse({"success": False, "error": "missing target"}, status_code=400)
