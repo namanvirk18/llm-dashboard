@@ -1,0 +1,3 @@
+This is a sample file for the summarising agent. Drop your own notes, logs or
+documents into this folder and ask the agent to summarise them by relative path.
+The agent can only read files inside this folder.
